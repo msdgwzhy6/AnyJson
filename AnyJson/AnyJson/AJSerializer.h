@@ -12,7 +12,9 @@
 
 @interface AJSerializer : NSObject
 
++ (NSData *)jsonDataWithObject:(id<AJSerializable>)object;
 + (NSString *)jsonStringWithObject:(id<AJSerializable>)object;
+
 + (id)objectWithJsonString:(NSString *)jsonString;
 
 @end

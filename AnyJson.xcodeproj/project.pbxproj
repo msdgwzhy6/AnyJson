@@ -15,6 +15,9 @@
 		4A2F87C719CC76F700B3A033 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A2F87C519CC76F700B3A033 /* LaunchScreen.xib */; };
 		4A2F87D319CC76F700B3A033 /* AnyJsonTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A2F87D219CC76F700B3A033 /* AnyJsonTests.m */; };
 		4A2F87E019CC779B00B3A033 /* AJSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A2F87DF19CC779B00B3A033 /* AJSerializer.m */; };
+		4A64249719CD951E00D329A2 /* AJPropertyDescriptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A64249619CD951E00D329A2 /* AJPropertyDescriptor.m */; };
+		4A64249A19CD9B8800D329A2 /* AJClassHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A64249919CD9B8800D329A2 /* AJClassHelper.m */; };
+		4A64249E19CDA8D100D329A2 /* Playground.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A64249D19CDA8D100D329A2 /* Playground.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +47,12 @@
 		4A2F87DD19CC773000B3A033 /* AnyJson.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnyJson.h; sourceTree = "<group>"; };
 		4A2F87DE19CC779B00B3A033 /* AJSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AJSerializer.h; sourceTree = "<group>"; };
 		4A2F87DF19CC779B00B3A033 /* AJSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AJSerializer.m; sourceTree = "<group>"; };
+		4A64249519CD951E00D329A2 /* AJPropertyDescriptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AJPropertyDescriptor.h; sourceTree = "<group>"; };
+		4A64249619CD951E00D329A2 /* AJPropertyDescriptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AJPropertyDescriptor.m; sourceTree = "<group>"; };
+		4A64249819CD9B8800D329A2 /* AJClassHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AJClassHelper.h; sourceTree = "<group>"; };
+		4A64249919CD9B8800D329A2 /* AJClassHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AJClassHelper.m; sourceTree = "<group>"; };
+		4A64249C19CDA8D100D329A2 /* Playground.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Playground.h; sourceTree = "<group>"; };
+		4A64249D19CDA8D100D329A2 /* Playground.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Playground.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				4A2F87DC19CC770C00B3A033 /* AnyJson */,
+				4A64249B19CDA8BF00D329A2 /* playground */,
 				4A2F87BA19CC76F700B3A033 /* AppDelegate.h */,
 				4A2F87BB19CC76F700B3A033 /* AppDelegate.m */,
 				4A2F87BD19CC76F700B3A033 /* ViewController.h */,
@@ -130,8 +140,21 @@
 				4A2F87DD19CC773000B3A033 /* AnyJson.h */,
 				4A2F87DE19CC779B00B3A033 /* AJSerializer.h */,
 				4A2F87DF19CC779B00B3A033 /* AJSerializer.m */,
+				4A64249519CD951E00D329A2 /* AJPropertyDescriptor.h */,
+				4A64249619CD951E00D329A2 /* AJPropertyDescriptor.m */,
+				4A64249819CD9B8800D329A2 /* AJClassHelper.h */,
+				4A64249919CD9B8800D329A2 /* AJClassHelper.m */,
 			);
 			path = AnyJson;
+			sourceTree = "<group>";
+		};
+		4A64249B19CDA8BF00D329A2 /* playground */ = {
+			isa = PBXGroup;
+			children = (
+				4A64249C19CDA8D100D329A2 /* Playground.h */,
+				4A64249D19CDA8D100D329A2 /* Playground.m */,
+			);
+			path = playground;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,8 +257,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A64249719CD951E00D329A2 /* AJPropertyDescriptor.m in Sources */,
 				4A2F87E019CC779B00B3A033 /* AJSerializer.m in Sources */,
 				4A2F87BF19CC76F700B3A033 /* ViewController.m in Sources */,
+				4A64249E19CDA8D100D329A2 /* Playground.m in Sources */,
+				4A64249A19CD9B8800D329A2 /* AJClassHelper.m in Sources */,
 				4A2F87BC19CC76F700B3A033 /* AppDelegate.m in Sources */,
 				4A2F87B919CC76F700B3A033 /* main.m in Sources */,
 			);
@@ -428,6 +454,7 @@
 				4A2F87D819CC76F700B3A033 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4A2F87D919CC76F700B3A033 /* Build configuration list for PBXNativeTarget "AnyJsonTests" */ = {
 			isa = XCConfigurationList;
@@ -436,6 +463,7 @@
 				4A2F87DB19CC76F700B3A033 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -10,6 +10,7 @@
 #define AnyJson_AnyJson_h
 
 #import "AJSerializer.h"
+#import <objc/runtime.h>
 
 @protocol AJSerializable <NSObject>
 
