@@ -10,7 +10,6 @@
 
 @interface Playground : NSObject
 
-@property (nonatomic, strong) NSString *testString;
 @property (nonatomic, assign) NSInteger testInteger;
 
 @end
