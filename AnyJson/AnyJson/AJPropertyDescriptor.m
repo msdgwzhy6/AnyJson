@@ -11,7 +11,7 @@
 @interface AJPropertyDescriptor ()
 
 @property (nonatomic, strong) NSString *propertyName;
-@property (nonatomic, assign) AJPropertyType propertyType;
+@property (nonatomic, assign) AJDataType propertyType;
 
 @property (nonatomic, strong) Class propertyClass;
 

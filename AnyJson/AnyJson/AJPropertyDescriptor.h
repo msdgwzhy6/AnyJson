@@ -13,7 +13,7 @@
 
 @property (nonatomic, strong, readonly) NSString *propertyName;
 
-@property (nonatomic, assign, readonly) AJPropertyType propertyType;
+@property (nonatomic, assign, readonly) AJDataType propertyType;
 @property (nonatomic, strong, readonly) Class propertyClass;
 
 - (instancetype)initWithPropertyNameString:(NSString *)propertyNameString propertyAttributeString:(NSString *)propertyAttributeString;

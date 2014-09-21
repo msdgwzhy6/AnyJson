@@ -56,11 +56,37 @@
     return nil;
 }
 
-+ (AJPropertyType)propertyTypeFromPropertyAttributeString:(NSString *)propertyAttributeString
++ (AJDataType)dataTypeOfClass:(Class)clazz
+{
+    if (clazz == [NSArray class]) {
+        return AJDataTypeNSArray;
+    }
+    if (clazz == [NSDictionary class]) {
+        return AJDataTypeNSDictionary;
+    }
+    if (clazz == [NSString class]) {
+        return AJDataTypeNSString;
+    }
+    if (clazz == [NSDate class]) {
+        return AJDataTypeNSDate;
+    }
+    if (clazz == [NSData class]) {
+        return AJDataTypeNSData;
+    }
+    if (clazz == [NSNumber class]) {
+        return AJDataTypeNSNumber;
+    }
+    
+    return AJDataTypeCustomizedObject;
+}
+
+
+
++ (AJDataType)propertyTypeFromPropertyAttributeString:(NSString *)propertyAttributeString
 {
     NSRange range = [propertyAttributeString rangeOfString:@","];
     if (range.location == NSNotFound) {
-        return AJPropertyTypeError;
+        return AJDataTypeError;
     }
     
     NSString *typeString = [propertyAttributeString substringToIndex:range.location];
@@ -68,102 +94,83 @@
     if ([typeString hasPrefix:@"T@"]) {
         NSUInteger length = typeString.length;
         Class clazz = NSClassFromString([typeString substringWithRange:NSMakeRange(3, length - 4)]);
-        if (clazz == [NSArray class] || clazz == [NSMutableArray class]) {
-            return AJPropertyTypeNSArray;
-        }
-        if (clazz == [NSDictionary class] || clazz == [NSMutableDictionary class]) {
-            return AJPropertyTypeNSDictionary;
-        }
-        if (clazz == [NSString class] || clazz == [NSMutableString class]) {
-            return AJPropertyTypeNSString;
-        }
-        if (clazz == [NSDate class]) {
-            return AJPropertyTypeNSDate;
-        }
-        if (clazz == [NSData class] || clazz == [NSMutableData class]) {
-            return AJPropertyTypeNSData;
-        }
-        if (clazz == [NSNumber class]) {
-            return AJPropertyTypeNSNumber;
-        }
-        
-        return AJPropertyTypeCustomizedObject;
+        return [AJClassHelper dataTypeOfClass:clazz];
     }
     
     if ([typeString hasPrefix:@"Tc"]) {
-        return AJPropertyTypeChar;
+        return AJDataTypeChar;
     }
     if ([typeString hasPrefix:@"Td"]) {
-        return AJPropertyTypeDouble;
+        return AJDataTypeDouble;
     }
     if ([typeString hasPrefix:@"Ti"]) {
-        return AJPropertyTypeInt;
+        return AJDataTypeInt;
     }
     if ([typeString hasPrefix:@"Tf"]) {
-        return AJPropertyTypeFloat;
+        return AJDataTypeFloat;
     }
     if ([typeString hasPrefix:@"Tl"]) {
-        return AJPropertyTypeLong;
+        return AJDataTypeLong;
     }
     if ([typeString hasPrefix:@"Ts"]) {
-        return AJPropertyTypeShort;
+        return AJDataTypeShort;
     }
     if ([typeString hasPrefix:@"T{"]) {
-        return AJPropertyTypeStructure;
+        return AJDataTypeStructure;
     }
     if ([typeString hasPrefix:@"TI"]) {
-        return AJPropertyTypeUnsigned;
+        return AJDataTypeUnsigned;
     }
-    if ([typeString hasPrefix:@"T^?"] || [typeString hasPrefix:@"T?"]) {
-        return AJPropertyTypeUnknownType;
+    if ([typeString hasPrefix:@"T?"]) {
+        return AJDataTypeUnknownType;
     }
     if ([typeString hasPrefix:@"Tv"]) {
-        return AJPropertyTypeVoid;
+        return AJDataTypeVoid;
     }
     if ([typeString hasPrefix:@"Tq"]) {
-        return AJPropertyTypeLongLong;
+        return AJDataTypeLongLong;
     }
     if ([typeString hasPrefix:@"TC"]) {
-        return AJPropertyTypeUnsignedChar;
+        return AJDataTypeUnsignedChar;
     }
     if ([typeString hasPrefix:@"TS"]) {
-        return AJPropertyTypeUnsignedShort;
+        return AJDataTypeUnsignedShort;
     }
     if ([typeString hasPrefix:@"TL"]) {
-        return AJPropertyTypeUnsignedLong;
+        return AJDataTypeUnsignedLong;
     }
     if ([typeString hasPrefix:@"TQ"]) {
-        return AJPropertyTypeUnsignedLongLong;
+        return AJDataTypeUnsignedLongLong;
     }
     if ([typeString hasPrefix:@"TB"]) {
-        return AJPropertyTypeCPPBool;
+        return AJDataTypeCPPBool;
     }
     if ([typeString hasPrefix:@"T*"]) {
-        return AJPropertyTypeCharString;
+        return AJDataTypeCharString;
     }
     if ([typeString hasPrefix:@"T#"]) {
-        return AJPropertyTypeClass;
+        return AJDataTypeClass;
     }
     if ([typeString hasPrefix:@"T:"]) {
-        return AJPropertyTypeSelector;
+        return AJDataTypeSelector;
     }
     if ([typeString hasPrefix:@"T["]) {
-        return AJPropertyTypeArray;
+        return AJDataTypeArray;
     }
     if ([typeString hasPrefix:@"T{"]) {
-        return AJPropertyTypeStructure;
+        return AJDataTypeStructure;
     }
     if ([typeString hasPrefix:@"T("]) {
-        return AJPropertyTypeUnion;
+        return AJDataTypeUnion;
     }
     if ([typeString hasPrefix:@"Tb"]) {
-        return AJPropertyTypeBitField;
+        return AJDataTypeBitField;
     }
     if ([typeString hasPrefix:@"T^"]) {
-        return AJPropertyTypePointer;
+        return AJDataTypePointer;
     }
     
-    return AJPropertyTypeError;
+    return AJDataTypeError;
 }
 
 @end

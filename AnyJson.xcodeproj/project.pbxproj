@@ -15,6 +15,8 @@
 		4A2F87C719CC76F700B3A033 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A2F87C519CC76F700B3A033 /* LaunchScreen.xib */; };
 		4A2F87D319CC76F700B3A033 /* AnyJsonTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A2F87D219CC76F700B3A033 /* AnyJsonTests.m */; };
 		4A2F87E019CC779B00B3A033 /* AJSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A2F87DF19CC779B00B3A033 /* AJSerializer.m */; };
+		4A57457219CE6618008E81E7 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A57457119CE6618008E81E7 /* NSData+Base64.m */; };
+		4A57457519CE69C0008E81E7 /* OtherObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A57457419CE69C0008E81E7 /* OtherObject.m */; };
 		4A64249719CD951E00D329A2 /* AJPropertyDescriptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A64249619CD951E00D329A2 /* AJPropertyDescriptor.m */; };
 		4A64249A19CD9B8800D329A2 /* AJClassHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A64249919CD9B8800D329A2 /* AJClassHelper.m */; };
 		4A64249E19CDA8D100D329A2 /* Playground.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A64249D19CDA8D100D329A2 /* Playground.m */; };
@@ -47,6 +49,10 @@
 		4A2F87DD19CC773000B3A033 /* AnyJson.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnyJson.h; sourceTree = "<group>"; };
 		4A2F87DE19CC779B00B3A033 /* AJSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AJSerializer.h; sourceTree = "<group>"; };
 		4A2F87DF19CC779B00B3A033 /* AJSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AJSerializer.m; sourceTree = "<group>"; };
+		4A57457019CE6618008E81E7 /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
+		4A57457119CE6618008E81E7 /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64.m"; sourceTree = "<group>"; };
+		4A57457319CE69C0008E81E7 /* OtherObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OtherObject.h; sourceTree = "<group>"; };
+		4A57457419CE69C0008E81E7 /* OtherObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OtherObject.m; sourceTree = "<group>"; };
 		4A64249519CD951E00D329A2 /* AJPropertyDescriptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AJPropertyDescriptor.h; sourceTree = "<group>"; };
 		4A64249619CD951E00D329A2 /* AJPropertyDescriptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AJPropertyDescriptor.m; sourceTree = "<group>"; };
 		4A64249819CD9B8800D329A2 /* AJClassHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AJClassHelper.h; sourceTree = "<group>"; };
@@ -144,8 +150,18 @@
 				4A64249619CD951E00D329A2 /* AJPropertyDescriptor.m */,
 				4A64249819CD9B8800D329A2 /* AJClassHelper.h */,
 				4A64249919CD9B8800D329A2 /* AJClassHelper.m */,
+				4A57456F19CE65C6008E81E7 /* Categories */,
 			);
 			path = AnyJson;
+			sourceTree = "<group>";
+		};
+		4A57456F19CE65C6008E81E7 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				4A57457019CE6618008E81E7 /* NSData+Base64.h */,
+				4A57457119CE6618008E81E7 /* NSData+Base64.m */,
+			);
+			path = Categories;
 			sourceTree = "<group>";
 		};
 		4A64249B19CDA8BF00D329A2 /* playground */ = {
@@ -153,6 +169,8 @@
 			children = (
 				4A64249C19CDA8D100D329A2 /* Playground.h */,
 				4A64249D19CDA8D100D329A2 /* Playground.m */,
+				4A57457319CE69C0008E81E7 /* OtherObject.h */,
+				4A57457419CE69C0008E81E7 /* OtherObject.m */,
 			);
 			path = playground;
 			sourceTree = "<group>";
@@ -262,7 +280,9 @@
 				4A2F87BF19CC76F700B3A033 /* ViewController.m in Sources */,
 				4A64249E19CDA8D100D329A2 /* Playground.m in Sources */,
 				4A64249A19CD9B8800D329A2 /* AJClassHelper.m in Sources */,
+				4A57457219CE6618008E81E7 /* NSData+Base64.m in Sources */,
 				4A2F87BC19CC76F700B3A033 /* AppDelegate.m in Sources */,
+				4A57457519CE69C0008E81E7 /* OtherObject.m in Sources */,
 				4A2F87B919CC76F700B3A033 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

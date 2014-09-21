@@ -8,53 +8,53 @@
 
 #import <Foundation/Foundation.h>
 
-typedef NS_ENUM(NSUInteger, AJPropertyType) {
+typedef NS_ENUM(NSUInteger, AJDataType) {
     
-    AJPropertyTypeError = 0,
+    AJDataTypeError = 0,
     
     // JSONable class types
-    AJPropertyTypeJsonableObject = 100,
-    AJPropertyTypeNSArray = 101,
-    AJPropertyTypeNSDictionary = 102,
-    AJPropertyTypeNSDate = 103,
-    AJPropertyTypeNSData = 104,
-    AJPropertyTypeNSString = 105,
-    AJPropertyTypeNSNumber = 106,
+    AJDataTypeJsonableObject = 100,
+    AJDataTypeNSArray = 101,
+    AJDataTypeNSDictionary = 102,
+    AJDataTypeNSDate = 103,
+    AJDataTypeNSData = 104,
+    AJDataTypeNSString = 105,
+    AJDataTypeNSNumber = 106,
     
     // primitive types
-    AJPropertyTypePrimitiveType = 200,
-    AJPropertyTypeChar = 201,
-    AJPropertyTypeDouble = 202,
-    AJPropertyTypeFloat = 203,
-    AJPropertyTypeInt = 204,
-    AJPropertyTypeLong = 205,
-    AJPropertyTypeShort = 206,
-    AJPropertyTypeUnsigned = 207,
-    AJPropertyTypeLongLong = 208,
-    AJPropertyTypeUnsignedChar = 209,
-    AJPropertyTypeUnsignedShort = 210,
-    AJPropertyTypeUnsignedLong = 211,
-    AJPropertyTypeUnsignedLongLong = 212,
-    AJPropertyTypeCPPBool = 213,
+    AJDataTypePrimitiveType = 200,
+    AJDataTypeChar = 201,
+    AJDataTypeDouble = 202,
+    AJDataTypeFloat = 203,
+    AJDataTypeInt = 204,
+    AJDataTypeLong = 205,
+    AJDataTypeShort = 206,
+    AJDataTypeUnsigned = 207,
+    AJDataTypeLongLong = 208,
+    AJDataTypeUnsignedChar = 209,
+    AJDataTypeUnsignedShort = 210,
+    AJDataTypeUnsignedLong = 211,
+    AJDataTypeUnsignedLongLong = 212,
+    AJDataTypeCPPBool = 213,
     
     // hard for me to transform, but I will work it out
-    AJPropertyTypeComplicateType = 220,
-    AJPropertyTypeArray = 221,
-    AJPropertyTypeStructure = 222,
-    AJPropertyTypeUnion = 223,
-    AJPropertyTypeBitField = 224,
-    AJPropertyTypeCharString = 215,
-    AJPropertyTypeVoid = 216,
+    AJDataTypeComplicateType = 220,
+    AJDataTypeArray = 221,
+    AJDataTypeStructure = 222,
+    AJDataTypeUnion = 223,
+    AJDataTypeBitField = 224,
+    AJDataTypeCharString = 215,
+    AJDataTypeVoid = 216,
     
     // hmmm...harder...
-    AJPropertyTypeHarderType = 240,
-    AJPropertyTypeSelector = 241,
-    AJPropertyTypeClass = 242,
-    AJPropertyTypePointer = 243,
-    AJPropertyTypeUnknownType = 244, // sometimes it could be a function pointer
+    AJDataTypeHarderType = 240,
+    AJDataTypeSelector = 241,
+    AJDataTypeClass = 242,
+    AJDataTypePointer = 243,
+    AJDataTypeUnknownType = 244, // sometimes it could be a function pointer
     
     // other objects which can not be transformed to JSON directly
-    AJPropertyTypeCustomizedObject = 301,
+    AJDataTypeCustomizedObject = 301,
 };
 
 @interface AJClassHelper : NSObject
@@ -62,6 +62,7 @@ typedef NS_ENUM(NSUInteger, AJPropertyType) {
 + (NSDictionary *)reflectProperties:(Class)clazz;
 
 + (Class)classFromPropertyAttributeString:(NSString *)propertyAttributeString;
-+ (AJPropertyType)propertyTypeFromPropertyAttributeString:(NSString *)propertyAttributeString;
++ (AJDataType)propertyTypeFromPropertyAttributeString:(NSString *)propertyAttributeString;
++ (AJDataType)dataTypeOfClass:(Class)clazz;
 
 @end

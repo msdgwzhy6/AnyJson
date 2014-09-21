@@ -22,25 +22,13 @@
     
     // 1
     Playground *playground = [[Playground alloc] init];
-    
-    unsigned int outCount = 0;
-    objc_property_t *propertyList = class_copyPropertyList([Playground class], &outCount);
-    
-    for (int i = 0; i < outCount; i++) {
-        const char *propertyAttribute = property_getAttributes(propertyList[i]);
-        NSString *propertyAttributeString = [NSString stringWithCString:propertyAttribute encoding:NSUTF8StringEncoding];
-        NSLog(@"here i am");
-    }
-    
-    // 2
-    NSMutableDictionary *dic = [[NSMutableDictionary alloc] initWithDictionary:nil];
-    
-    // 3
-    NSDictionary *propertyMap = [AJClassHelper reflectProperties:[playground class]];
-    NSLog(@"%@", propertyMap);
-    
-    
-    
+    OtherObject *otherObject = [[OtherObject alloc] init];
+    otherObject.testInteger = 13;
+    otherObject.isTest = YES;
+    otherObject.name = @"casa";
+    playground.otherObject = otherObject;
+    NSString *jsonString = [AJSerializer jsonStringWithObject:playground];
+    NSLog(@"json string is %@", jsonString);
 }
 
 @end
