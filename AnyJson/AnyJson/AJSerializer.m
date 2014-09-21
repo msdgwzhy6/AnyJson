@@ -77,10 +77,6 @@
         return [NSString stringWithCString:charString encoding:NSUTF8StringEncoding];
     }
     
-    if (dataType == AJDataTypeCharString) {
-        NSLog(@"%@", rawObject);
-    }
-    
     if (dataType == AJDataTypeCPPBool) {
         return @([rawObject boolValue]);
     }
