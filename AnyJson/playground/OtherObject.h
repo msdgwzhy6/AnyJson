@@ -13,5 +13,7 @@
 @property (nonatomic, assign) NSInteger testInteger;
 @property (nonatomic, assign) BOOL isTest;
 @property (nonatomic, strong) NSString *name;
+@property (nonatomic, assign) char testChar;
+//@property (nonatomic, assign) const char *charString;
 
 @end

@@ -48,11 +48,11 @@
         }
         
         if (propertyDescriptor.propertyType > AJDataTypePrimitiveType && propertyDescriptor.propertyType < AJDataTypeComplicateType) {
-            result[propertyDescriptor.propertyName] = @([property integerValue]);
+            result[propertyDescriptor.propertyName] = [AJSerializer jsonablePrimitiveValue:property dataType:propertyDescriptor.propertyType];
         }
         
         if (propertyDescriptor.propertyType > AJDataTypeComplicateType && propertyDescriptor.propertyType < AJDataTypeCustomizedObject) {
-            result[propertyDescriptor.propertyName] = @"can't transform it";
+            result[propertyDescriptor.propertyName] = [AJSerializer jsonableComplicateValue:property dataType:propertyDescriptor.propertyType];
         }
         
         if (propertyDescriptor.propertyType == AJDataTypeCustomizedObject) {
@@ -60,6 +60,32 @@
         }
     }
     return result;
+}
+
++ (id)jsonableComplicateValue:(id)rawObject dataType:(AJDataType)dataType
+{
+    if (dataType == AJDataTypeCharString) {
+        NSLog(@"%@", rawObject);
+    }
+    return @"N/A";
+}
+
++ (id)jsonablePrimitiveValue:(id)rawObject dataType:(AJDataType)dataType
+{
+    if (dataType == AJDataTypeChar) {
+        char charString[] = {[rawObject charValue], '\0'};
+        return [NSString stringWithCString:charString encoding:NSUTF8StringEncoding];
+    }
+    
+    if (dataType == AJDataTypeCharString) {
+        NSLog(@"%@", rawObject);
+    }
+    
+    if (dataType == AJDataTypeCPPBool) {
+        return @([rawObject boolValue]);
+    }
+    
+    return @([rawObject integerValue]);
 }
 
 + (id)jsonableObject:(id)rawObject dataType:(AJDataType)dataType

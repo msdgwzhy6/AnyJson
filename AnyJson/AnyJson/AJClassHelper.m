@@ -145,7 +145,7 @@
     if ([typeString hasPrefix:@"TB"]) {
         return AJDataTypeCPPBool;
     }
-    if ([typeString hasPrefix:@"T*"]) {
+    if ([typeString hasPrefix:@"T*"] || [typeString hasPrefix:@"Tr*"]) {
         return AJDataTypeCharString;
     }
     if ([typeString hasPrefix:@"T#"]) {

@@ -26,6 +26,8 @@
     otherObject.testInteger = 13;
     otherObject.isTest = YES;
     otherObject.name = @"casa";
+    otherObject.testChar = 'c';
+//    otherObject.charString = "here i am";
     playground.otherObject = otherObject;
     NSString *jsonString = [AJSerializer jsonStringWithObject:playground];
     NSLog(@"json string is %@", jsonString);
