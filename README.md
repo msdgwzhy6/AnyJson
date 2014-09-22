@@ -1,4 +1,6 @@
 AnyJson
 =======
 
-transform any object to JSON and transform JSON to any object
+objective-C JSON kit which can transform any object to JSON.
+
+and now I'm developing the feature of transforming any JSON to any target Objective-c Class.

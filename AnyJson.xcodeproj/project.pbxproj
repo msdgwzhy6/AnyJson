@@ -21,6 +21,7 @@
 		4A64249A19CD9B8800D329A2 /* AJClassHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A64249919CD9B8800D329A2 /* AJClassHelper.m */; };
 		4A64249E19CDA8D100D329A2 /* Playground.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A64249D19CDA8D100D329A2 /* Playground.m */; };
 		4AAD6FE819CFC53900307F9F /* AJObject2JsonSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AAD6FE719CFC53900307F9F /* AJObject2JsonSerializer.m */; };
+		4AAD6FEB19CFC65F00307F9F /* AJJson2ObjectSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AAD6FEA19CFC65F00307F9F /* AJJson2ObjectSerializer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,8 @@
 		4A64249D19CDA8D100D329A2 /* Playground.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Playground.m; sourceTree = "<group>"; };
 		4AAD6FE619CFC53900307F9F /* AJObject2JsonSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AJObject2JsonSerializer.h; sourceTree = "<group>"; };
 		4AAD6FE719CFC53900307F9F /* AJObject2JsonSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AJObject2JsonSerializer.m; sourceTree = "<group>"; };
+		4AAD6FE919CFC65F00307F9F /* AJJson2ObjectSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AJJson2ObjectSerializer.h; sourceTree = "<group>"; };
+		4AAD6FEA19CFC65F00307F9F /* AJJson2ObjectSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AJJson2ObjectSerializer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +158,8 @@
 				4A64249919CD9B8800D329A2 /* AJClassHelper.m */,
 				4AAD6FE619CFC53900307F9F /* AJObject2JsonSerializer.h */,
 				4AAD6FE719CFC53900307F9F /* AJObject2JsonSerializer.m */,
+				4AAD6FE919CFC65F00307F9F /* AJJson2ObjectSerializer.h */,
+				4AAD6FEA19CFC65F00307F9F /* AJJson2ObjectSerializer.m */,
 				4A57456F19CE65C6008E81E7 /* Categories */,
 			);
 			path = AnyJson;
@@ -281,6 +286,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A64249719CD951E00D329A2 /* AJPropertyDescriptor.m in Sources */,
+				4AAD6FEB19CFC65F00307F9F /* AJJson2ObjectSerializer.m in Sources */,
 				4A2F87E019CC779B00B3A033 /* AJSerializer.m in Sources */,
 				4A2F87BF19CC76F700B3A033 /* ViewController.m in Sources */,
 				4A64249E19CDA8D100D329A2 /* Playground.m in Sources */,
