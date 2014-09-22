@@ -15,6 +15,7 @@
 + (NSData *)jsonDataWithObject:(id)object;
 + (NSString *)jsonStringWithObject:(id)object;
 
-+ (id)objectWithJsonString:(NSString *)jsonString;
++ (id)objectWithJsonData:(NSData *)jsonData targetObjectClass:(Class)targetObjectClass;
++ (id)objectWithJsonString:(NSString *)jsonString targetObjectClass:(Class)targetObjectClass;
 
 @end
